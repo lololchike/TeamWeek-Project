@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+
+</head> <h1>REGISTRATION FORM</h1>
+<p>PLEASE FILL THE FORM WITH BLOCK LETTERS</P>
+<body>
+    <form action="">
+        <table>
+
+            <tr>
+                <td>first name:</td> 
+            <td><input type="text"name="fname"></td></tr>
+
+
+            <tr> 
+                <td>last name:</td> 
+            <td><input type="text"name="lname"></td></tr>
+
+
+            <tr> <td>email address:</td>
+            <td><input type="email"name="email" ></td>
+
+
+            <tr> <td>year:</td>
+            <td><input type="year"name="yearone"></td>
+
+            </tr>
+            
+        </table>
+    </form>
+
+    
+</body>
+</html>
