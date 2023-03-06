@@ -4,3 +4,6 @@ function today(){
 function form(){
     add
 }
+fuction (){
+    details
+}
