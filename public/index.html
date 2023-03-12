@@ -11,37 +11,49 @@
     <link rel="stylesheet" href="./team.css">
    <img src="./Images/logo1.jpg" alt="logo" class="logo">
     
-    <title>REGISTRATION FORM</title>
+    <title> REGISTRATION FORM</title>
 </head>
 <body>
-    <h1>STUDENT REGISTRATION FORM</h1>
+    <h1><u>STUDENT REGISTRATION FORM </u></h1>
 
-    <h3>Basic Information</h3>
-    <form method="post" action="">
-        <label for="Username">Full Name:</label>
-        <input type="text" id="firstname" name="firstname" placeholder="First Name..." required>
-        <label for="Username">Middle Name:</label>
-        <input type="text" id="middlename" name="middlename" placeholder="Middle Name..." required>
-        <label for="Username">Last Name:</label>
-        <input type="text" id="lastname" name="lastname" placeholder="Last Name..." required>
-        <br><br><br>
-        <label for="number">Student Number:</label>
-        <input type="number" id="number" name="number" placeholder="Student Number..." required>
-        <br><br>
-        <p>ACADEMIC YEAR:</p>
-
-        <label for="ACADEMIC YEAR">Please Select:</label>
-        <select id="Year" name="year">
-        <option value="YL1">1st Year</option>
-        <option value="YL2">2nd Year</option>
-        <option value="YL3">3rd Year</option>
-        <option value="YL4">4th Year</option>
-        <option value="YL5">5th Year</option>
-
-        <br><br>
-
+   <div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <h3>Basic Information</h3>
+            <p class="blue-text"> <b> Fill in below Information<br> so that we can personalize the right experience for you.</b></p>
+            <div class="Student-info">
+                <form class="form-card" onsubmit="event.preventDefault()">
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">First name<span class="text-danger"> *</span></label> <input type="text" id="fname" name="fname" placeholder="Enter your first name" onblur="validate(1)"> </div>
+                         <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Second name<span class="text-danger"> *</span></label> <input type="text" id="Sname" name="name" placeholder="Enter your second name" onblur="validate(2)"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Last name<span class="text-danger"> *</span></label> <input type="text" id="lname" name="lname" placeholder="Enter your last name" onblur="validate(3)"> </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Email adress<span class="text-danger"> *</span></label> <input type="text" id="email" name="email" placeholder="" onblur="validate(4)"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Phone Number<span class="text-danger"> *</span></label> <input type="text" id="mob" name="mob" placeholder="" onblur="validate(5)"> </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Student Number<span class="text-danger"> *</span></label> <input type="text" id="job" name="job" placeholder="" onblur="validate(5)"> </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+<h3>ACADEMIC YEAR</h3>
+<select class="form-select" aria-label="Default select example">
+      <label for="ACADEMIC YEAR">ACADEMIC YEAR</label>
+  <option value="1">1 Year</option>
+  <option value="2">2 Year</option>
+  <option value="3">3 Year</option>
+  <option value="4">4 Year</option>
+</select>
+</div>
+<h3>SPECIALIZATION-Please Select Program</h3>
         <select name="Degree Program" id="program"></select>
-        <label for="Degree Program">Please Select Program:</label>
+    
         <select id="Program" name="program">
         <option value="D1">Bachelor of Business Administration</option>
         <option value="D2">Bachelor of Science in Computer Information Systems</option>
@@ -56,30 +68,9 @@
         <option value="D11">Doctor of Philosophy in Health Systems Management</option>
         <option value="D12">Bachelor of Medicine & Bachelor of Surgery (MB.ChB)</option>
 
-
-
-        <br><br>
-        
-
-        
-<select name="Email" id="Email Address"></select>
-        <label for="email">Enter Email:</label>
-    <input type="email" id="email" name="email" placeholder="Student Email..." required>
-        
-<br><br>
-
-
-        <label for="number">Phone Number:</label>
-    <input type="number" id="number" name="Phone" placeholder="(000)000000..." required>
-
-   <br><br>
-
-   <label for="">Current Address:</label>
-    <input type="text" id="address" name="address" required>
-
-    <br><br><br>
+   <div class="btn">
     <input type="submit" value="Submit The Form">
-        
+    </div>
 
     </form>
 </body>
