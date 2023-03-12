@@ -45,3 +45,6 @@ text-decoration-color: darkgoldenrod;
 font-size: medium;
 display: inline-block;
   }
+  h1{
+    text-align: center;
+  }
