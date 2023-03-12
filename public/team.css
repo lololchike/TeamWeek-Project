@@ -3,10 +3,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
+  
   }
   
   h1 {
-    color: white;
+    color: rgb(18, 17, 17);
     text-align: center;
   }
   
@@ -33,7 +35,13 @@ position: absolute;
     background-repeat:   no-repeat;
     background-size:     cover;
     border-radius: 70px;
-  
-    
- }
-  
+  }
+  .btn{
+    background-color: rgb(7, 7, 73);
+border-radius:2px;
+padding:5px;
+text-align: center;
+text-decoration-color: darkgoldenrod;
+font-size: medium;
+display: inline-block;
+  }
