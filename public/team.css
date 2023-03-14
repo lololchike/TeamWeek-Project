@@ -6,24 +6,18 @@ body {
   background-attachment: fixed;
    padding:10px;
     margin: 20%;
-
-  
   }
   
   h1 {
     color: rgb(18, 17, 17);
     text-align: center;
   }
-  
   p {
     font-family: verdana;
     font-size: 20px;
     color: rgb(10, 10, 10);
     text-align: center;
   }
-
-
- 
   .logo{
 position:absolute;
     top: 40px;
@@ -34,8 +28,6 @@ position:absolute;
     background-repeat:   no-repeat;
     background-size:     cover;
     border-radius: 70px;
-   
-    
   }
   .btn{
     background-color: rgb(7, 7, 73);
@@ -48,5 +40,12 @@ display: inline-block;
   }
   h1,h2{
     text-align: center;
-  
+  }
+  .Student-info{
+ column-gap: 40px;
+ column-count: 3;
+  }
+  .col-md-6 ,.col-12{
+     display: flex;
+  column-gap: 80px;
   }
