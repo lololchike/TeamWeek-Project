@@ -49,3 +49,22 @@ display: inline-block;
      display: flex;
   column-gap: 80px;
   }
+
+  #thanks{
+    display: flex;
+    background-color: blanchedalmond;
+    margin-top: 10%;
+    border-radius: 50%;
+    height:17em;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    font-size: 100%;
+    flex-direction: column;
+   }
+  
+   #backbtn{
+    width: 20%;
+    background-color: rgb(173, 202, 193);
+    margin-top: 5%;
+   }
