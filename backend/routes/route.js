@@ -5,7 +5,12 @@ const router = express.Router();
 const studentData = require("../models/models");
 
 router.get('/thanks', (req, res) => {
-    res.sendFile('thanks.html', { root: 'public' });
+    res.sendFile('thanks.html', { root: '../frontend1/public' });
+  });
+
+  router.get('/students', async (req, res) => {
+ const allStudents = await studentData.find({})
+ res.send(allStudents)
   });
 
 router.post("/", (req, res) => {

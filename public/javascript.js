@@ -1,3 +1,0 @@
-function today(){
-    get hello
-}
