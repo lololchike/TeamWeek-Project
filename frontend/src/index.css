@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.studentPageDiv{
+  margin: auto;
+ width: 80%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: space-between;
+
+}
+
+.App{
+  align-items: center;
+  justify-content: center;
+}
+
+.topLogoImg{
+  height: 40px;
+  width: 20%;
+} 
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.student{
+  max-height: fit-content;
+  /* width: 50%; */
+  margin-top: 2%;
+  background-color: rgb(187, 204, 213);
+  margin-right: 2%;
+  white-space: pre-wrap;
+  justify-content: left;
+}
+
+.editDelete{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.joinUsForm{
+  margin:auto;
+  width: 40%;
+  background-color: rgb(77, 78, 80);
+  color: aliceblue;
+  border-radius: 4%;
+  margin-top: 2%;
+  font-size: 65%;
+}
+.mb-3{
+  margin: auto;
+  width: 80%;
+}
+.studentNames{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 85.2%;
+  margin: auto;
+}
