@@ -9,7 +9,7 @@ function PageNav() {
         <Container>
           <Navbar.Brand href="#home">
           <img src="TeamLogo.JPG"
-          className="topLogoImg"></img>Éclat Online University
+          className="topLogoImg" alt=''></img>Éclat Online University
           </Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link href="#home">Home</Nav.Link>
