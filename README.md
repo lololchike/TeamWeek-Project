@@ -1,24 +1,24 @@
 ## Project Name
-   **University Student Registration Website**
+   ** University Student Registration Website **
 
 ## Project Description
 The app provides a platform for new students to submit their full details to the university and also see other students registered. Campus admins and other students  can view all registered students. 
    
  
 ## Authors Information
-   *Josephine Kemuma
-   *Racheal Kinyua
-   *Lucy Ololchike
-   *Kenneth Kabutu
-   *Bill Otunga
+   * Josephine Kemuma
+   * Racheal Kinyua
+   * Lucy Ololchike
+   * Kenneth Kabutu
+   * Bill Otunga
 
 ## Setup Instructions
-*Clone the Repository in VScode
-*Run npm install to install dependancies
-*create a .env file on your local repo and connect to your mongoDB url
-*cd into frontend folder, open terminal and run npn start
-*open another terminal window, cd into backend folder, and run npn start
-*enjoy
+* Clone the Repository in VScode
+* Run npm install to install dependancies
+* create a .env file on your local repo and connect to    your mongoDB url
+* cd into frontend folder, open terminal and run npn start
+* open another terminal window, cd into backend folder, and run npn start
+* enjoy
 
 ## BDD
 On clicking join us from homepage, the student gets a form, fills and submits, all fields are mandatory.
