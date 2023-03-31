@@ -1,5 +1,5 @@
 ## Project Name
-   ** University Student Registration Website **
+   **University Student Registration Website**
 
 ## Project Description
 The app provides a platform for new students to submit their full details to the university and also see other students registered. Campus admins and other students  can view all registered students. 
@@ -30,11 +30,13 @@ In this release, we simply aimed to showcase understanding of the MERN (MongoDB,
 
    
 ## Technologies Used
-The frontend is built purely using reactJS
-Backend runs on: 
->Express
->Node.js
->Mongodb
+1. The frontend is built purely using reactJS
+2. Backend runs on: 
+  * Express
+  * Node.js
+  * Mongodb
+3. Bootstrap used for styling components
+4. VS Code Editor
 
 ## Live Link
    https://github.com/lololchike/TeamWeek-Project.git
