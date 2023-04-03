@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const studentData = require("../models/models");
+const studentData = require("../../models/models");
 
 //get route for all students
 router.get("/students", async (req, res) => {
