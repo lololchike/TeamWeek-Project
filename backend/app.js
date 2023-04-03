@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 const mongoose = require('mongoose')
 require('dotenv').config();
-const router = require("./routes/route")
+const router = require("./api/routes/route")
 //app.get("/",(req,res)=>{res.send("You are Here!")})
 app.use(express.static("../frontend1/public"))
 app.use(express.json()); 
