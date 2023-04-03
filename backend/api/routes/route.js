@@ -14,7 +14,7 @@ router.get("/students", async (req, res) => {
 //get route for one student
 router.get("/students/:id", (req, res) => {
   studentData.findById(req.params.id).then((student) => {
-    res.send(student);
+    res.send(student); 
   });
 });
 
