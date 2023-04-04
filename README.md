@@ -1,6 +1,9 @@
 ## Project Name
    **University Student Registration Website**
 
+## Live Link
+   http://ec2-34-207-191-119.compute-1.amazonaws.com
+
 ## Project Description
 The app provides a platform for new students to submit their full details to the university and also see other students registered. Campus admins and other students  can view all registered students. 
    
@@ -37,9 +40,6 @@ In this release, we simply aimed to showcase understanding of the MERN (MongoDB,
   * Mongodb
 3. Bootstrap used for styling components
 4. VS Code Editor
-
-## Live Link
-   https://github.com/lololchike/TeamWeek-Project.git
 
 ## Lincence and Copyright Information
    (c) 2023 Team {teamName}

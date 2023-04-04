@@ -9,7 +9,7 @@ const buildPath = path.join(_dirname, "../frontend/build")
 
 app.use(express.static(buildPath))
 
-router.get("/*", (req, res)=> {
+router.get("*", (req, res)=> {
 res.sendFile(
     path.join(__dirname, "../frontend/build/index.html"))
 })
