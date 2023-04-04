@@ -1,7 +1,7 @@
+require('dotenv').config();
 const express = require("express")
 const app = express()
 const mongoose = require('mongoose')
-require('dotenv').config();
 const router = require("./api/routes/route")
 const path = require("path")
 const _dirname = path.dirname("")
@@ -20,8 +20,7 @@ app.use(express.urlencoded({extended: true}));
 app.use("/", router)
 
 mongoose.set('strictQuery', false);
-mongoose.connect(process.env.DBCONNECT);
+mongoose.connect("mongodb+srv://Bill:procedure1@nodeprojects.mtiiga4.mongodb.net/University?retryWrites=true&w=majority");
 
 
-
-app.listen(8000,()=>{console.log("server listening on port 8000")})
+app.listen(5022,()=>{console.log("server listening on port 8000")})
