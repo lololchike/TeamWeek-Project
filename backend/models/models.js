@@ -11,7 +11,7 @@ const studentModel = mongoose.Schema({
     email: String,
     address: String,
     dateEnrolled: {type:String,
-       default: new Date()},
+       default: new Date},
        dateforsorting: {type:Number,
         default: Date.now()}
     

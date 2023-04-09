@@ -12,7 +12,7 @@ function Students() {
   }, []);
 
   const getStudents = async () => {
-    await fetch("/students")
+    await fetch("/api/students")
     .then((res) => {
       if (res.ok) {
         return res.json();
@@ -29,11 +29,10 @@ function Students() {
       deleteStudent = await deleteStudent.json();
       if(deleteStudent) {
         getStudents()
-        // alert(`Student successfully deleted from our database!`)
+       
       }
       else{}
     }
-    // confirm("This will permanently remove the student from database, you can't undo this! Click ok to proceed")
     
   }
   const handleSearch = async (event) => {
@@ -71,8 +70,10 @@ function Students() {
             <p><strong>Joined On: </strong>{student.dateEnrolled.slice(0, 21)}</p> 
             <p><strong>Phone No:</strong> {student.phoneNumber}</p>
             <p><strong>Acad Year: </strong>{student.academicYear} </p>
+            <p><strong>Lives In:</strong> {student.address}</p>
+            <p><strong>Email:</strong> {student.email}</p> 
             <p><strong>Course:</strong> {student.program}</p>
-            <p><strong>Email:</strong> {student.email}</p> </div> 
+            </div> 
             <div className="editDelete">
             <Link to= {`/students/${student._id}`}>
               <Button as="input" type="button" value="Edit" size="sm"/></Link>

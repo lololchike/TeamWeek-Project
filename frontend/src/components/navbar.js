@@ -2,7 +2,7 @@ import { Link} from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-
+import logo from "./TeamLogo.JPG"
 
 function PageNav() {
   return (
@@ -14,7 +14,7 @@ function PageNav() {
               className={({ isActive }) =>
                 isActive ? "active nav-link" : "nav-link"
               }>
-            <img src="TeamLogo.JPG" className="topLogoImg"></img> Éclat Online
+            <img src={logo} className="topLogoImg"></img> Éclat Online
             University
           </Navbar.Brand>
           <Nav className="mr-auto">

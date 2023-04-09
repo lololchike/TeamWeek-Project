@@ -2,19 +2,19 @@ const express = require("express");
 
 const router = express.Router();
 
-const studentData = require("../../models/models");
+const studentData = require("../models/models");
 
 //get route for all students
-router.get("/students", async (req, res) => {
+router.get("/api/students", async (req, res) => {
   const allStudents = await studentData.find({}).sort({
-    dateforsorting:-1});  
+    _id:-1});  
   res.send(allStudents);
 });
 
 //get route for one student
-router.get("/students/:id", (req, res) => {
+router.get("/api/students/:id", (req, res) => {
   studentData.findById(req.params.id).then((student) => {
-    res.send(student); 
+    res.send(student);
   });
 });
 
@@ -62,13 +62,14 @@ router.post("/join", (req, res) => {
     phoneNumber: req.body.phone.toString(),
     email: req.body.email,
     address: req.body.address,
+    dateEnrolled: new Date
   });
   datatosend.save();
   res.redirect("/thanks");
 });
 
 // updatestudent route
-router.put("/students/:id", async (req, res) => {
+router.put("/api/students/:id", async (req, res) => {
   let newDetailes = await studentData.updateOne(
     { _id: req.params.id},
     { $set: req.body}
