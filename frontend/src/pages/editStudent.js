@@ -7,11 +7,12 @@ const EditStudent = () => {
   const [firstName, setFirstName] = React.useState("");
   const [middleName, setMiddleName] = React.useState("");
   const [lastName, setLastName] = React.useState("");
-  const [phone, setPhone] = React.useState("");
+
+  const [phoneNumber, setPhone] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [address, setAddress] = React.useState("");
-  const [year, setYear] = React.useState("");
-  const [course, setCourse] = React.useState("");
+  const [academicYear, setYear] = React.useState("");
+  const [program, setCourse] = React.useState("");
   const navigate = useNavigate()
 
   const studentParams = useParams();
@@ -21,7 +22,7 @@ const EditStudent = () => {
 
   const getStudentDetails = async () => {
     console.warn(studentParams);
-    let student = await fetch(`/students/${studentParams.id}`);
+    let student = await fetch(`/api/students/${studentParams.id}`);
     student = await student.json();
     console.warn(student);
     setFirstName(student.firstName);
@@ -39,10 +40,10 @@ const EditStudent = () => {
 
     if (window.confirm("Are you sure you wanna save the new details?") === true) {
    
-    let newDetailes = await fetch(`/students/${studentParams.id}`, {
+    let newDetailes = await fetch(`/api/students/${studentParams.id}`, {
       method: "Put",
       body: JSON.stringify({
-      firstName,middleName,lastName,phone,email,address,year,course,
+      firstName,middleName,lastName,phoneNumber,email,address,academicYear,program,
       }),
       headers: {
         "Content-Type": "Application/json",
@@ -61,7 +62,7 @@ const EditStudent = () => {
       </strong>
       <h6>Enter new details below</h6>
       <Form>
-        <div className="studentNames">
+        <span className="studentNames">
           <Form.Group className="mb-3">
             <Form.Label>First Name</Form.Label>
             <Form.Control
@@ -95,15 +96,14 @@ const EditStudent = () => {
               onChange={(e) => setLastName(e.target.value)}
             />
           </Form.Group>
-        </div>
+        </span>
         <Form.Group className="mb-3">
           <Form.Label>Phone Number</Form.Label>
           <Form.Control
-            value={phone}
+            value={phoneNumber}
             size="sm"
             type="tel"
             placeholder="Phone Number"
-            name="phone"
             onChange={(e) => setPhone(e.target.value)}
           />
         </Form.Group>
@@ -132,10 +132,9 @@ const EditStudent = () => {
         <Form.Group className="mb-3">
           <Form.Label>What's your current level?</Form.Label>
           <Form.Select
-            value={year}
+            value={academicYear}
             size="sm"
             aria-label="Default select example"
-            name="year"
             onChange={(e) => setYear(e.target.value)}
           >
             <option value="1st Year">1st Year"</option>
@@ -147,37 +146,23 @@ const EditStudent = () => {
         <Form.Group className="mb-3">
           <Form.Label>And your course?</Form.Label>
           <Form.Select
-            value={course}
+            value={program}
             size="sm"
             aria-label="Default select example"
-            name="program"
             onChange={(e) => setCourse(e.target.value)}
           >
-            <option value="D1">Bachelor of Business Administration</option>
-            <option value="D2">
-              Bachelor of Science in Computer Information Systems
-            </option>
-            <option value="D3">Bachelor of Science in Nursing</option>
-            <option value="D4">Bachelor of Science in Community Health</option>
-            <option value="D5">Bachelor of Pharmacy</option>
-            <option value="D6">Bachelor of International Relations</option>
-            <option value="D7">
-              Master of Science in Computer Information Systems
-            </option>
-            <option value="D8">Master of Business Administration</option>
-            <option value="D9">
-              {" "}
-              Master of Science in Finance and Investment
-            </option>
-            <option value="D10">
-              Doctor of Philosophy in Business Administration and Management
-            </option>
-            <option value="D11">
-              Doctor of Philosophy in Health Systems Management
-            </option>
-            <option value="D12">
-              Bachelor of Medicine & Bachelor of Surgery (MB.ChB)
-            </option>
+            <option value="Business Administration">Bachelor of Business Administration</option>
+        <option value="Information Systems">Bachelor of Science in Computer Information Systems</option>
+        <option value="Nursing">Bachelor of Science in Nursing</option>
+        <option value="Community Health">Bachelor of Science in Community Health</option>
+        <option value="Pharmacy">Bachelor of Pharmacy</option>
+        <option value="International Relations">Bachelor of International Relations</option>
+        <option value="Msc Information Systems">Master of Science in Computer Information Systems</option>
+        <option value="Master of Business Administration">Master of Business Administration</option>
+        <option value="MSc Finance and Investment"> Master of Science in Finance and Investment</option>
+        <option value="PhD Business Administration and Management">Doctor of Philosophy in Business Administration and Management</option>
+        <option value="PhD Health Systems Management">Doctor of Philosophy in Health Systems Management</option>
+        <option value="Bachelor of Medicine">Bachelor of Medicine & Bachelor of Surgery (MB.ChB)</option>
           </Form.Select>
         </Form.Group>
         <Button variant="dark" onClick={updateStudent}>

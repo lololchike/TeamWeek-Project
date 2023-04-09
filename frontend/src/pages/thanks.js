@@ -7,7 +7,7 @@ const Thanks = () => {
 
    <h5>You've done a good thing. We have saved your info successfully.</h5> 
 
-   <Link to={"/students"}> <Button variant="dark" className="thanksBtn">
+   <Link to={"/students/"}> <Button variant="dark" className="thanksBtn">
           View other enrolled students
         </Button></Link>   
     
