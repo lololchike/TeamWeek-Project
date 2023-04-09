@@ -67,7 +67,6 @@ router.post("/join", (req, res) => {
   datatosend.save();
   res.redirect("/thanks");
 });
-
 // updatestudent route
 router.put("/api/students/:id", async (req, res) => {
   let newDetailes = await studentData.updateOne(
