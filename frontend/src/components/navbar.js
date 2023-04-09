@@ -46,14 +46,6 @@ function PageNav() {
             >
               Our Students
             </Nav.Link>
-            <Nav.Link as={Link} to="/login" 
-              
-              className={({ isActive }) =>
-                isActive ? "active nav-link" : "nav-link"
-              }
-            >
-              Log In
-            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
