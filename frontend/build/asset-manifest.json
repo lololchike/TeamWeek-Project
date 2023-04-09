@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.5818edbb.css",
-    "main.js": "/static/js/main.ad191e97.js",
+    "main.js": "/static/js/main.dbefbf70.js",
     "static/media/university-2079013_1280.jpg": "/static/media/university-2079013_1280.752e844060066392c5e7.jpg",
     "static/media/TeamLogo.JPG": "/static/media/TeamLogo.e120ce394534d3e8b934.JPG",
     "index.html": "/index.html",
     "main.5818edbb.css.map": "/static/css/main.5818edbb.css.map",
-    "main.ad191e97.js.map": "/static/js/main.ad191e97.js.map"
+    "main.dbefbf70.js.map": "/static/js/main.dbefbf70.js.map"
   },
   "entrypoints": [
     "static/css/main.5818edbb.css",
-    "static/js/main.ad191e97.js"
+    "static/js/main.dbefbf70.js"
   ]
 }
