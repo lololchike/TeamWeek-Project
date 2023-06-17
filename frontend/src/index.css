@@ -167,12 +167,15 @@ margin: 0;
 }
 
 #showing{
-  height: 5vh;
+  display: flex;
+  height: 6vh;
   color: white;
   background-color: #104697;
   width: 30%;
   margin: 1vh auto;
   border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .thanks{
