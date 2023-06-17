@@ -98,6 +98,7 @@ function Students() {
               <Button as="input" type="button" value="Edit" size="sm" id="student-Button"/></Link>
               <Button as="input" type="button" value="Delete" size="sm" variant="warning" onClick={() => handleDelete(student._id)} id="student-Button"/>
             </div>
+            <br />
           </div>
         ))}
       </div>
