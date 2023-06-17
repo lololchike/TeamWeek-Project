@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 
 function Students() {
-  // let redactedNumber
+
 
   const [students, setStudents] = useState([]);
 
@@ -105,11 +105,4 @@ function Students() {
   );
 }
 
-export default Students;
-
-
-// // for (let i = 0; i < jsonRes.length; i++) {
-//     //   phone = jsonRes[i].phoneNumber;
-//     //    // Do something with the phone number
-//     //  }
-//     
+export default Students;  
