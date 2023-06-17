@@ -41,7 +41,10 @@ function JoinUs() {
             type="tel"
             placeholder="Phone Number"
             name="phone"
+            pattern="\d{10}"
+            title="Please enter a 10-digit number"
           />
+
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

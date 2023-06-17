@@ -10,7 +10,7 @@ const HomePage = () => {
     </div>
     <br /> <br /> <br />
 
-    <Link to={"/join"} className = "hometext" > <div className = "homeClickHere">  Click here to join us</div></Link>
+    <div id = "homeClickHere"> <Link to={"/join"} id = "hometext" > <h5>Click here to join us</h5> </Link> </div>
     
     <br /> <br /> <br />
 

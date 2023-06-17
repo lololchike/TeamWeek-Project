@@ -35,9 +35,11 @@ const EditStudent = () => {
     setCourse(student.program);
   };
 
+  const form = document.getElementById("updateStudentForm") 
+  const updateStudent = async (e) => {
     
-  const updateStudent = async () => {
-
+    if (form.checkValidity()) {
+      e.preventDefault();
     if (window.confirm("Are you sure you wanna save the new details?") === true) {
    
     let newDetailes = await fetch(`/api/students/${studentParams.id}`, {
@@ -51,8 +53,10 @@ const EditStudent = () => {
     });
     newDetailes = await newDetailes.json()
     alert(`${firstName}'s details successfully updated, click ok to go to all students page`)
-    navigate("/students")}
-  };
+    }
+    navigate("/students")
+} 
+};
   return (
     <div className="joinUsForm">
       <strong>
@@ -61,17 +65,19 @@ const EditStudent = () => {
         </p>
       </strong>
       <h6>Enter new details below</h6>
-      <Form>
+      <Form id="updateStudentForm">
         <span className="studentNames">
           <Form.Group className="mb-3">
             <Form.Label>First Name</Form.Label>
             <Form.Control
+            required
               onChange={(e) => setFirstName(e.target.value)}
               value={firstName}
               size="sm"
               type="name"
               placeholder="First Name"
               name="firstname"
+              
             />
           </Form.Group>
 
@@ -83,7 +89,9 @@ const EditStudent = () => {
               size="sm"
               type="name"
               placeholder="Middle Name"
+              required
               name="middlename"
+              
             />
           </Form.Group>
           <Form.Group className="mb-3" type="name">
@@ -93,18 +101,24 @@ const EditStudent = () => {
               size="sm"
               placeholder="Last Name"
               name="lastname"
+              required
               onChange={(e) => setLastName(e.target.value)}
+              
             />
           </Form.Group>
         </span>
         <Form.Group className="mb-3">
           <Form.Label>Phone Number</Form.Label>
           <Form.Control
-            value={phoneNumber}
+          value={phoneNumber}
             size="sm"
             type="tel"
             placeholder="Phone Number"
             onChange={(e) => setPhone(e.target.value)}
+            pattern="\d{10}"
+            required
+            title="Please enter a 10-digit number"
+          
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -115,6 +129,7 @@ const EditStudent = () => {
             type="email"
             placeholder="Email"
             name="email"
+            required
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
@@ -126,7 +141,9 @@ const EditStudent = () => {
             type="address"
             placeholder="Current Address"
             name="address"
+            required
             onChange={(e) => setAddress(e.target.value)}
+            
           />
         </Form.Group>
         <Form.Group className="mb-3">
@@ -135,7 +152,9 @@ const EditStudent = () => {
             value={academicYear}
             size="sm"
             aria-label="Default select example"
+            required
             onChange={(e) => setYear(e.target.value)}
+          
           >
             <option value="1st Year">1st Year"</option>
             <option value="2nd Year">2nd Year"</option>
@@ -165,8 +184,8 @@ const EditStudent = () => {
         <option value="Bachelor of Medicine">Bachelor of Medicine & Bachelor of Surgery (MB.ChB)</option>
           </Form.Select>
         </Form.Group>
-        <Button variant="dark" onClick={updateStudent}>
-          Send
+        <Button type="submit" variant="dark" onClick={updateStudent}>
+          Save
         </Button>
       </Form>
     </div>
