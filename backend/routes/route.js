@@ -30,7 +30,7 @@ router.get("/search/:key", async (req, res) => {
       { lastName: { $regex: caseInsensitiveRegex } },
       { academicYear: { $regex: caseInsensitiveRegex } },
       { program: { $regex: caseInsensitiveRegex } },
-      // { email: { $regex: caseInsensitiveRegex } },
+      { email: { $regex: caseInsensitiveRegex } },
       { address: { $regex: caseInsensitiveRegex } },
       { phoneNumber: { $regex: caseInsensitiveRegex } }
     ]
