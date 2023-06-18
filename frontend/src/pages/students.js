@@ -39,7 +39,7 @@ function Students() {
     
   }
   const handleSearch = async (event) => {
-    let key = event.target.value
+    let key = (event.target.value).toLowerCase()
     if(key){
     let searchResult = await fetch(`/search/${key}`)
     searchResult = await searchResult.json()

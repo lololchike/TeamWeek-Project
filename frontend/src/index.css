@@ -150,6 +150,10 @@ code {
   border-style: solid;
   margin-bottom: 1%;
 }
+
+.me-2:focus{
+  background-color: rgb(241, 243, 246);
+}
 h5, p{
 padding: 0;
 margin: 0;
@@ -242,6 +246,10 @@ font-family: 'Bodoni MT'}
   width: 40%;
   align-items: center;
 } 
+
+#navBarHeader h6{
+  margin: 0;
+}
 
 .topLogoImg{
   height: 80%;

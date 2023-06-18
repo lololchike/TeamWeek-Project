@@ -7,7 +7,8 @@ const studentData = require("../models/models");
 //get route for all students
 router.get("/api/students", async (req, res) => {
   const allStudents = await studentData.find({}).sort({
-    _id:-1});  
+    _id: -1,
+  });
   res.send(allStudents);
 });
 
@@ -18,37 +19,55 @@ router.get("/api/students/:id", (req, res) => {
   });
 });
 
-// get route for searching students 
+// get route for searching students
 router.get("/search/:key", async (req, res) => {
-  let foundStudents = await studentData.find({"$or": [
-    {
-      firstName: {$regex: req.params.key}
-    },
-    {
-      middleName: {$regex: req.params.key}
-    },
-    {
-      lastName: {$regex: req.params.key}
-    }, 
-    {
-      academicYear: {$regex: req.params.key}},
-    {
-      program: {$regex: req.params.key}
-    }, 
-    {
-      email: {$regex: req.params.key}
-       },
-       {
-        address: {$regex: req.params.key}
-        },
-        
-        {
-          phoneNumber: {$regex: req.params.key}
-          },
-  ]}
-    )
-  res.send(foundStudents)
-})
+  const caseInsensitiveRegex = new RegExp(req.params.key, "i");
+
+  let foundStudents = await studentData.find({
+    $or: [
+      { firstName: { $regex: caseInsensitiveRegex } },
+      { middleName: { $regex: caseInsensitiveRegex } },
+      { lastName: { $regex: caseInsensitiveRegex } },
+      { academicYear: { $regex: caseInsensitiveRegex } },
+      { program: { $regex: caseInsensitiveRegex } },
+      // { email: { $regex: caseInsensitiveRegex } },
+      { address: { $regex: caseInsensitiveRegex } },
+      { phoneNumber: { $regex: caseInsensitiveRegex } }
+    ]
+  });
+
+  res.send(foundStudents);
+});
+// router.get("/search/:key", async (req, res) => {
+//   let foundStudents = await studentData.find({"$or": [
+//     {
+//       firstName: {$regex: (req.params.key)}
+//     },
+//     {
+//       middleName: {$regex: (req.params.key)}
+//     },
+//     {
+//       lastName: {$regex: req.params.key}
+//     },
+//     {
+//       academicYear: {$regex: req.params.key}},
+//     {
+//       program: {$regex: req.params.key}
+//     },
+//     {
+//       email: {$regex: req.params.key}
+//        },
+//        {
+//         address: {$regex: req.params.key}
+//         },
+
+//         {
+//           phoneNumber: {$regex: req.params.key}
+//           },
+//   ]}
+//     )
+//   res.send(foundStudents)
+// })
 
 //post route
 router.post("/join", (req, res) => {
@@ -62,7 +81,7 @@ router.post("/join", (req, res) => {
     phoneNumber: req.body.phone.toString(),
     email: req.body.email,
     address: req.body.address,
-    dateEnrolled: new Date
+    dateEnrolled: new Date(),
   });
   datatosend.save();
   res.redirect("/thanks");
@@ -70,10 +89,10 @@ router.post("/join", (req, res) => {
 // updatestudent route
 router.put("/api/students/:id", async (req, res) => {
   let newDetailes = await studentData.updateOne(
-    { _id: req.params.id},
-    { $set: req.body}
+    { _id: req.params.id },
+    { $set: req.body }
   );
-  res.send(newDetailes)
+  res.send(newDetailes);
 });
 
 //delete route

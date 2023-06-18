@@ -1,5 +1,5 @@
 ## Project Name
-   **Eclat Online University (MERN-project)**
+   **University Student Registration Website**
 
 ## Live Link
    http://ec2-34-207-191-119.compute-1.amazonaws.com
@@ -9,26 +9,37 @@ The app provides a platform for new students to submit their full details to the
    
  
 ## Authors Information
+   * Josephine Kemuma
+   * Racheal Kinyua
+   * Lucy Ololchike
+   * Kenneth Kabutu
    * Bill Otunga
 
 ## Setup Instructions
-Click on http://ec2-34-207-191-119.compute-1.amazonaws.com to test
+* Clone the Repository in VScode
+* Run npm install to install dependancies
+* create a .env file on your local repo and connect to    your mongoDB url
+* cd into frontend folder, open terminal and run npn start
+* open another terminal window, cd into backend folder, and run npn start
+* enjoy
 
 ## BDD
 On clicking join us from homepage, the student gets a form, fills and submits, all fields are mandatory.
 The details are stored on mongoDB and our students page is automatically updated with the new student details for immediate viewing. 
 A person can view, delete, and update a student details.
 
-#### Work In progress:
-1. Add HTTPS to the EC2 instance.
+#### NB:
+In this release, we simply aimed to showcase understanding of the MERN (MongoDB, ExpressJS, ReactJS, and NodeJS) stack of technologies. We have endeavoured to implement all CRUD operations both frontend and backend. But we have no authentication at this stage and anyone can add, view, update, and delete students without any consequences. 
 
+   
 ## Technologies Used
 1. The frontend is built purely using reactJS
 2. Backend runs on: 
   * Express
   * Node.js
   * Mongodb
-3. Hosted on AWS EC2
+3. Bootstrap used for styling components
+4. VS Code Editor
 
 ## Lincence and Copyright Information
-   (c) 2023 Bill Otunga
+   (c) 2023 Team {teamName}
